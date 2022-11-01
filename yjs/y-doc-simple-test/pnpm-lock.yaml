@@ -1,0 +1,32 @@
+lockfileVersion: 5.4
+
+specifiers:
+  yjs: ^13.5.42
+
+dependencies:
+  yjs: registry.npmmirror.com/yjs/13.5.42
+
+packages:
+
+  registry.npmmirror.com/isomorphic.js/0.2.5:
+    resolution: {integrity: sha512-PIeMbHqMt4DnUP3MA/Flc0HElYjMXArsw1qwJZcm9sqR8mq3l8NYizFMty0pWwE/tzIGH3EKK5+jes5mAr85yw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/isomorphic.js/-/isomorphic.js-0.2.5.tgz}
+    name: isomorphic.js
+    version: 0.2.5
+    dev: false
+
+  registry.npmmirror.com/lib0/0.2.52:
+    resolution: {integrity: sha512-CjxlM7UgICfN6b2OPALBXchIBiNk6jE+1g7JP8ha+dh1xKRDSYpH0WQl1+rMqCju49xUnwPG34v4CR5/rPOZhg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lib0/-/lib0-0.2.52.tgz}
+    name: lib0
+    version: 0.2.52
+    engines: {node: '>=14'}
+    dependencies:
+      isomorphic.js: registry.npmmirror.com/isomorphic.js/0.2.5
+    dev: false
+
+  registry.npmmirror.com/yjs/13.5.42:
+    resolution: {integrity: sha512-3aYBPeUSBUCs/vCOYolbyzhsQ6IDm1DeJgfhHVbW+6kq8YhWjkk2SUhYtBxd3lZPNsqmJGzYH9shKINhSVbEzw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/yjs/-/yjs-13.5.42.tgz}
+    name: yjs
+    version: 13.5.42
+    dependencies:
+      lib0: registry.npmmirror.com/lib0/0.2.52
+    dev: false
