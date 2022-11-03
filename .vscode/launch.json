@@ -1,14 +1,29 @@
 {
   "configurations": [
-  {
-    "name": "acorn-console",
-    "program": "${workspaceFolder}/acorn/acorn-console/index.js",
-    "request": "launch",
-    "runtimeExecutable": "/Users/xijinling/.nvm/versions/node/v16.16.0/bin/node",
-    "skipFiles": [
-      "<node_internals>/**"
-    ],
-    "type": "node"
-  }
+    {
+      "name": "acorn-console",
+      "program": "${workspaceFolder}/acorn/acorn-console/index.js",
+      "request": "launch",
+      "runtimeExecutable": "/Users/xijinling/.nvm/versions/node/v16.16.0/bin/node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "y-websocket-server",
+      "program": "${workspaceFolder}/yjs/y-websocket/server.js",
+      "request": "launch",
+      "runtimeExecutable": "/Users/xijinling/.nvm/versions/node/v16.16.0/bin/node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "env": {
+        "PORT": "1234",
+        "CALLBACK_URL": "http://127.0.0.1:1337/",
+        "CALLBACK_OBJECTS": "{\"monaco\":\"Text\"}"
+      },
+      "type": "node"
+    },
   ]
 }

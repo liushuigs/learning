@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "PORT=1234 CALLBACK_URL=http://127.0.0.1:1337/ YPERSISTENCE=./dbDir node ./server.js",
+    "start": "PORT=1234 CALLBACK_URL=http://127.0.0.1:1337/ node ./server.js",
+    "start2": "PORT=1234 CALLBACK_URL=http://127.0.0.1:1337/ YPERSISTENCE=./dbDir node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ioredis": "^5.2.4",
+    "lib0": "^0.2.53",
     "ws": "^8.10.0",
+    "y-redis": "^1.0.3",
     "y-websocket": "^1.4.5",
     "yjs": "^13.5.42"
   }

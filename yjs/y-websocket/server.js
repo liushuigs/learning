@@ -1,7 +1,8 @@
 const WebSocket = require('ws')
 const http = require('http')
 const wss = new WebSocket.Server({ noServer: true })
-const {setupWSConnection, getYDoc} = require('y-websocket/bin/utils')
+const { RedisPersistence } = require('./y-redis')
+const {setupWSConnection, setPersistence} = require('y-websocket/bin/utils')
 
 const host = process.env.HOST || 'localhost'
 const port = process.env.PORT || 1234
@@ -11,6 +12,8 @@ const server = http.createServer((request, response) => {
   response.end('okay')
 })
 
+let persistence = new RedisPersistence()
+setPersistence(persistence)
 wss.on('connection', setupWSConnection)
 
 server.on('upgrade', (request, socket, head) => {
